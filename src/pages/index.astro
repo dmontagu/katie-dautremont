@@ -5,19 +5,38 @@ import PathwayCard from '../components/PathwayCard.astro';
 
 <Layout title="Home" description="Katie d'Autremont is a licensed therapist who writes, teaches, and guides people through personal growth. Therapy, writing, courses, and more.">
   <!-- Hero Section -->
-  <section class="py-24 px-8">
-    <div class="max-w-3xl mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-6">
-        Growth is a practice,<br />not a destination.
-      </h1>
-      <p class="text-lg text-charcoal-light max-w-2xl mx-auto">
-        I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Whether you're looking for support, insight, or tools to take with you, there's a place here for you.
-      </p>
+  <section class="py-16 md:py-24 px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h1 class="text-4xl md:text-5xl text-charcoal mb-6">
+            Growth is a practice,<br />not a destination.
+          </h1>
+          <p class="text-lg text-charcoal-light mb-8">
+            I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Whether you're looking for support, insight, or tools to take with you, there's a place here for you.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/therapy" class="px-6 py-3 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium">
+              Work With Me
+            </a>
+            <a href="/about" class="px-6 py-3 border border-sage text-sage rounded-md hover:bg-sage/5 transition-colors font-medium">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2 flex justify-center">
+          <img
+            src="/katie-dautremont.jpeg"
+            alt="Katie d'Autremont, LCSW"
+            class="w-64 md:w-80 rounded-2xl shadow-lg"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Pathways Section -->
-  <section class="py-12 px-8 bg-cream-dark/50">
+  <section class="py-16 px-8 bg-cream-dark/50">
     <div class="max-w-4xl mx-auto">
       <h2 class="font-serif text-2xl text-center mb-12">Ways to Work Together</h2>
       <div class="grid md:grid-cols-2 gap-6">
@@ -71,9 +90,10 @@ import PathwayCard from '../components/PathwayCard.astro';
     </div>
   </section>
 
-  <!-- Philosophy Section -->
-  <section class="py-12 px-8 bg-sage/5">
-    <div class="max-w-2xl mx-auto text-center">
+  <!-- Philosophy Section with background -->
+  <section class="py-16 px-8 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sage/10 via-sage/5 to-transparent"></div>
+    <div class="max-w-2xl mx-auto text-center relative">
       <h2 class="font-serif text-2xl mb-6">Who This Is For</h2>
       <p class="text-charcoal-light mb-6">
         I work best with people who have some stability in their lives and are genuinely curious about themselves. You don't need to have it all figured out — but you're ready to look inward, ask hard questions, and do the work that real growth requires.
@@ -85,7 +105,7 @@ import PathwayCard from '../components/PathwayCard.astro';
   </section>
 
   <!-- Newsletter Section -->
-  <section class="py-12 px-8">
+  <section class="py-16 px-8 bg-white">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="font-serif text-2xl mb-4">Between Sessions</h2>
       <p class="text-charcoal-light mb-8">
@@ -95,7 +115,7 @@ import PathwayCard from '../components/PathwayCard.astro';
         <input
           type="email"
           placeholder="Your email"
-          class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none"
+          class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-cream/50 focus:border-sage focus:outline-none focus:bg-white transition-colors"
           required
         />
         <button

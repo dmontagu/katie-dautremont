@@ -8,11 +8,13 @@ import Layout from '../layouts/Layout.astro';
       <h1 class="text-4xl md:text-5xl text-charcoal mb-12 text-center">About Katie</h1>
 
       <div class="grid md:grid-cols-3 gap-12 items-start">
-        <!-- Photo placeholder -->
+        <!-- Photo -->
         <div class="md:col-span-1">
-          <div class="aspect-[3/4] bg-cream-dark rounded-xl flex items-center justify-center text-warm-gray">
-            <span class="text-sm">Photo</span>
-          </div>
+          <img
+            src="/katie-dautremont.jpeg"
+            alt="Katie d'Autremont, LCSW"
+            class="w-full rounded-xl shadow-md"
+          />
         </div>
 
         <!-- Bio -->
@@ -28,10 +30,22 @@ import Layout from '../layouts/Layout.astro';
           <p class="text-charcoal-light">
             Over the years, I've found that the insights from therapy extend far beyond the session room. That's what led me to start writing and creating resources for people who want to engage with this work on their own terms — whether or not they're in therapy.
           </p>
+        </div>
+      </div>
 
-          <p class="text-charcoal-light">
-            When I'm not working, you'll probably find me with Goose, my dog, who has taught me more about presence and patience than any textbook.
-          </p>
+      <!-- Goose section -->
+      <div class="mt-16 bg-sage/5 rounded-2xl p-8 md:p-12">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img
+            src="/goose.jpg"
+            alt="Goose the dog"
+            class="w-48 h-48 object-cover rounded-full shadow-md"
+          />
+          <div>
+            <p class="text-charcoal-light text-lg">
+              When I'm not working, you'll probably find me with <strong class="text-charcoal">Goose</strong>, my dog, who has taught me more about presence and patience than any textbook.
+            </p>
+          </div>
         </div>
       </div>
 
