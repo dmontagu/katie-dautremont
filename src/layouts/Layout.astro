@@ -28,7 +28,7 @@ const fullTitle = `${title} | Be Balanced`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#7D9A8C" />
+    <meta name="theme-color" content="#FF6B6B" />
     <meta name="color-scheme" content="light" />
     <meta name="author" content="Katie d'Autremont, LCPC" />
     <link rel="apple-touch-icon" href={url('/og-image.jpg')} />
@@ -51,10 +51,10 @@ const fullTitle = `${title} | Be Balanced`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImageURL} />
 
-    <!-- Fonts -->
+    <!-- Fonts - Space Grotesk + DM Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <title>{fullTitle}</title>
     <ViewTransitions />
@@ -80,22 +80,50 @@ const fullTitle = `${title} | Be Balanced`;
     })} />
   </head>
   <body class="min-h-screen flex flex-col">
-    <header class="sticky top-0 z-50 py-6 px-8 bg-white/80 backdrop-blur-md border-b border-cream-dark/50">
+    <!-- Bold Header -->
+    <header class="sticky top-0 z-50 py-4 px-6 bg-cream border-b-4 border-navy">
       <nav class="max-w-6xl mx-auto flex items-center justify-between">
-        <a href={url('/')} class="font-serif text-xl text-charcoal hover:text-sage transition-colors">
-          Be Balanced
+        <a href={url('/')} class="group flex items-center gap-2">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-coral to-violet flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+            <span class="text-white font-display font-bold text-lg">B</span>
+          </div>
+          <span class="font-display font-bold text-xl text-navy">Be Balanced</span>
         </a>
-        <ul class="hidden md:flex items-center gap-8 text-sm">
-          <li><a href={url('/about')} class="text-charcoal-light hover:text-sage transition-colors">About</a></li>
-          <li><a href={url('/therapy')} class="text-charcoal-light hover:text-sage transition-colors">Therapy</a></li>
-          <li><a href={url('/writing')} class="text-charcoal-light hover:text-sage transition-colors">Writing</a></li>
-          <li><a href={url('/courses')} class="text-charcoal-light hover:text-sage transition-colors">Courses</a></li>
-          <li><a href={url('/ask')} class="text-charcoal-light hover:text-sage transition-colors">Ask</a></li>
-          <li><a href={url('/contact')} class="bg-sage text-cream px-6 py-2 rounded-md hover:bg-sage-dark transition-colors">Contact</a></li>
+        <ul class="hidden md:flex items-center gap-2">
+          <li>
+            <a href={url('/about')} class="px-4 py-2 font-display font-medium text-navy hover:text-coral transition-colors rounded-lg hover:bg-coral/10">
+              About
+            </a>
+          </li>
+          <li>
+            <a href={url('/therapy')} class="px-4 py-2 font-display font-medium text-navy hover:text-coral transition-colors rounded-lg hover:bg-coral/10">
+              Therapy
+            </a>
+          </li>
+          <li>
+            <a href={url('/writing')} class="px-4 py-2 font-display font-medium text-navy hover:text-coral transition-colors rounded-lg hover:bg-coral/10">
+              Writing
+            </a>
+          </li>
+          <li>
+            <a href={url('/courses')} class="px-4 py-2 font-display font-medium text-navy hover:text-coral transition-colors rounded-lg hover:bg-coral/10">
+              Courses
+            </a>
+          </li>
+          <li>
+            <a href={url('/ask')} class="px-4 py-2 font-display font-medium text-navy hover:text-coral transition-colors rounded-lg hover:bg-coral/10">
+              Ask
+            </a>
+          </li>
+          <li>
+            <a href={url('/contact')} class="ml-2 px-6 py-3 bg-coral text-white font-display font-bold rounded-xl hover:bg-coral-dark transition-colors shadow-[0_4px_0_0_#E85555] hover:shadow-[0_2px_0_0_#E85555] hover:translate-y-[2px]">
+              Let's Talk
+            </a>
+          </li>
         </ul>
-        <button class="md:hidden text-charcoal" aria-label="Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <button class="md:hidden p-2 text-navy hover:bg-coral/10 rounded-lg transition-colors" aria-label="Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </nav>
@@ -105,42 +133,74 @@ const fullTitle = `${title} | Be Balanced`;
       <slot />
     </main>
 
-    <footer class="bg-cream-dark py-12 px-8 mt-auto">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12 mb-12">
-          <div>
-            <h3 class="font-serif text-lg mb-4">Be Balanced</h3>
-            <p class="text-sm text-charcoal-light">
+    <!-- Bold Footer -->
+    <footer class="relative bg-navy text-white py-16 px-8 mt-auto overflow-hidden">
+      <!-- Decorative shapes -->
+      <div class="shape-circle shape-coral w-64 h-64 -top-32 -right-32 absolute opacity-20 animate-blob"></div>
+      <div class="shape-circle shape-violet w-48 h-48 bottom-0 left-1/4 absolute opacity-15 animate-blob-delayed"></div>
+
+      <div class="max-w-6xl mx-auto relative">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+          <!-- Brand -->
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-coral to-violet flex items-center justify-center">
+                <span class="text-white font-display font-bold text-xl">B</span>
+              </div>
+              <span class="font-display font-bold text-2xl">Be Balanced</span>
+            </div>
+            <p class="text-white/70 max-w-sm mb-4">
               Katie d'Autremont, LCPC<br />
               Licensed Clinical Professional Counselor
             </p>
+            <p class="text-sm text-white/50">
+              Growth is a practice, not a destination.
+            </p>
           </div>
+
+          <!-- Navigate -->
           <div>
-            <h4 class="font-medium mb-4 text-sm">Navigate</h4>
-            <ul class="text-sm text-charcoal-light space-y-2">
-              <li><a href={url('/about')} class="hover:text-sage transition-colors">About</a></li>
-              <li><a href={url('/therapy')} class="hover:text-sage transition-colors">Therapy</a></li>
-              <li><a href={url('/writing')} class="hover:text-sage transition-colors">Writing</a></li>
-              <li><a href={url('/courses')} class="hover:text-sage transition-colors">Courses</a></li>
+            <h4 class="font-display font-bold mb-6 text-sunshine">Navigate</h4>
+            <ul class="space-y-3">
+              <li><a href={url('/about')} class="text-white/70 hover:text-coral transition-colors">About</a></li>
+              <li><a href={url('/therapy')} class="text-white/70 hover:text-coral transition-colors">Therapy</a></li>
+              <li><a href={url('/writing')} class="text-white/70 hover:text-coral transition-colors">Writing</a></li>
+              <li><a href={url('/courses')} class="text-white/70 hover:text-coral transition-colors">Courses</a></li>
             </ul>
           </div>
+
+          <!-- Connect -->
           <div>
-            <h4 class="font-medium mb-4 text-sm">Connect</h4>
-            <ul class="text-sm text-charcoal-light space-y-2">
-              <li><a href="https://substack.com/@katiebetweensessions" class="hover:text-sage transition-colors" target="_blank" rel="noopener">Substack</a></li>
-              <li><a href={url('/contact')} class="hover:text-sage transition-colors">Contact</a></li>
+            <h4 class="font-display font-bold mb-6 text-sunshine">Connect</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="https://substack.com/@katiebetweensessions" class="text-white/70 hover:text-coral transition-colors inline-flex items-center gap-2" target="_blank" rel="noopener">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+                  </svg>
+                  Substack
+                </a>
+              </li>
+              <li><a href={url('/contact')} class="text-white/70 hover:text-coral transition-colors">Contact</a></li>
+              <li><a href={url('/ask')} class="text-white/70 hover:text-coral transition-colors">Ask a Question</a></li>
             </ul>
           </div>
         </div>
-        <div class="border-t border-warm-gray/30 pt-6 text-xs text-warm-gray">
-          <p class="mb-2">
-            <strong>Crisis Resources:</strong> If you are in crisis, please call 988 (Suicide & Crisis Lifeline) or go to your nearest emergency room.
+
+        <!-- Crisis Resources -->
+        <div class="bg-white/10 rounded-2xl p-6 mb-8">
+          <p class="text-sm text-white/80">
+            <span class="font-display font-bold text-coral">Crisis Resources:</span> If you are in crisis, please call <strong class="text-white">988</strong> (Suicide & Crisis Lifeline) or go to your nearest emergency room.
           </p>
-          <p>
-            &copy; {new Date().getFullYear()} Be Balanced Counseling. All rights reserved. |
-            <a href={url('/privacy')} class="hover:text-sage">Privacy</a> |
-            <a href={url('/terms')} class="hover:text-sage">Terms</a>
-          </p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
+          <p>&copy; {new Date().getFullYear()} Be Balanced Counseling. All rights reserved.</p>
+          <div class="flex gap-6">
+            <a href={url('/privacy')} class="hover:text-coral transition-colors">Privacy</a>
+            <a href={url('/terms')} class="hover:text-coral transition-colors">Terms</a>
+          </div>
         </div>
       </div>
     </footer>

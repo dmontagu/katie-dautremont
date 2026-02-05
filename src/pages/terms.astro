@@ -4,39 +4,55 @@ import { url } from '../utils/url';
 ---
 
 <Layout title="Terms of Service" description="Terms of service for Be Balanced Counseling website.">
-  <section class="py-24 px-8">
-    <div class="max-w-2xl mx-auto prose">
-      <h1 class="text-4xl text-charcoal mb-12 text-center">Terms of Service</h1>
+  <section class="py-20 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-coral w-64 h-64 -top-32 -left-32 absolute"></div>
 
-      <div class="text-charcoal-light space-y-8">
-        <p>
-          <em>Last updated: February 2025</em>
-        </p>
+    <div class="max-w-2xl mx-auto relative">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-display font-bold text-navy">Terms of Service</h1>
+      </div>
 
-        <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">Website Content</h2>
-        <p>
-          The content on this website is for informational and educational purposes only. It is not a substitute for professional mental health advice, diagnosis, or treatment.
-        </p>
+      <div class="bg-white rounded-3xl p-8 md:p-12 border-3 border-navy shadow-[0_6px_0_0_#0F172A]">
+        <div class="text-slate space-y-8">
+          <p class="text-sm text-slate/60">
+            Last updated: February 2025
+          </p>
 
-        <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">No Therapist-Client Relationship</h2>
-        <p>
-          Using this website, subscribing to the newsletter, submitting a question, or purchasing courses does not create a therapist-client relationship. A therapist-client relationship is only established through a formal agreement after an initial consultation.
-        </p>
+          <div>
+            <h2 class="font-display font-bold text-navy text-xl mb-4">Website Content</h2>
+            <p>
+              The content on this website is for informational and educational purposes only. It is not a substitute for professional mental health advice, diagnosis, or treatment.
+            </p>
+          </div>
 
-        <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">Crisis Disclaimer</h2>
-        <p>
-          This website is not designed to address mental health crises. If you are in crisis, please call 988 (Suicide & Crisis Lifeline), text HOME to 741741 (Crisis Text Line), or go to your nearest emergency room.
-        </p>
+          <div>
+            <h2 class="font-display font-bold text-navy text-xl mb-4">No Therapist-Client Relationship</h2>
+            <p>
+              Using this website, subscribing to the newsletter, submitting a question, or purchasing courses does not create a therapist-client relationship. A therapist-client relationship is only established through a formal agreement after an initial consultation.
+            </p>
+          </div>
 
-        <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">Courses and Digital Products</h2>
-        <p>
-          Digital products purchased through this site are for personal use only. They are educational tools and are not therapy. Refunds are available within 14 days of purchase.
-        </p>
+          <div>
+            <h2 class="font-display font-bold text-navy text-xl mb-4">Crisis Disclaimer</h2>
+            <p>
+              This website is not designed to address mental health crises. If you are in crisis, please call 988 (Suicide & Crisis Lifeline), text HOME to 741741 (Crisis Text Line), or go to your nearest emergency room.
+            </p>
+          </div>
 
-        <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">Contact</h2>
-        <p>
-          If you have questions about these terms, please <a href={url('/contact')} class="text-sage hover:text-sage-dark">contact us</a>.
-        </p>
+          <div>
+            <h2 class="font-display font-bold text-navy text-xl mb-4">Courses and Digital Products</h2>
+            <p>
+              Digital products purchased through this site are for personal use only. They are educational tools and are not therapy. Refunds are available within 14 days of purchase.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="font-display font-bold text-navy text-xl mb-4">Contact</h2>
+            <p>
+              If you have questions about these terms, please <a href={url('/contact')} class="text-coral font-display font-bold hover:underline">contact us</a>.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

@@ -23,91 +23,130 @@ const articles = [
 ---
 
 <Layout title="Writing" description="Essays and reflections on therapy, emotions, and personal growth from Katie d'Autremont, LCPC.">
-  <!-- Hero -->
-  <section class="py-24 px-8 relative overflow-hidden">
-    <div class="blob-sage w-80 h-80 -top-40 -left-40 absolute"></div>
-    <div class="blob-sage w-64 h-64 top-20 -right-32 absolute"></div>
+  <!-- HERO: Magazine-Style -->
+  <section class="py-20 md:py-28 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-violet w-80 h-80 -top-40 -left-40 absolute animate-blob"></div>
+    <div class="shape-circle shape-coral w-64 h-64 top-1/3 -right-32 absolute animate-blob-delayed"></div>
 
-    <div class="max-w-3xl mx-auto relative">
-      <div class="text-center mb-12">
-        <div class="accent-line mx-auto mb-6"></div>
-        <h1 class="text-4xl md:text-5xl text-charcoal mb-6">Read & Reflect</h1>
-        <p class="text-lg text-charcoal-light max-w-2xl mx-auto">
-          Essays and reflections on therapy, emotions, and what happens between sessions.
-        </p>
+    <div class="max-w-4xl mx-auto relative text-center">
+      <div class="inline-flex items-center gap-2 bg-violet/10 text-violet font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+        </svg>
+        READ & REFLECT
       </div>
 
-      <!-- Substack CTA -->
-      <div class="text-center">
-        <a
-          href="https://substack.com/@katiebetweensessions"
-          target="_blank"
-          rel="noopener"
-          class="inline-flex items-center gap-2 bg-sage text-cream px-8 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
-          </svg>
-          Subscribe on Substack
-        </a>
-      </div>
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-navy mb-6 leading-[1.05]">
+        Essays on
+        <span class="text-gradient-vibrant">therapy & growth</span>
+      </h1>
+
+      <p class="text-xl text-slate max-w-2xl mx-auto mb-10">
+        Thoughts on emotions, patterns, and what happens between sessions.
+      </p>
+
+      <a
+        href="https://substack.com/@katiebetweensessions"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-3 px-8 py-4 bg-violet text-white font-display font-bold text-lg rounded-xl hover:bg-violet-dark transition-all shadow-[0_4px_0_0_#7C3AED] hover:shadow-[0_2px_0_0_#7C3AED] hover:translate-y-[2px]"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+        </svg>
+        Subscribe on Substack
+      </a>
     </div>
   </section>
 
-  <!-- Featured Article -->
-  <section class="py-16 px-8 bg-white">
-    <div class="max-w-3xl mx-auto">
+  <!-- FEATURED ARTICLE: Bold Highlight -->
+  <section class="py-20 px-6 bg-navy relative overflow-hidden">
+    <div class="shape-circle shape-coral w-56 h-56 -top-28 right-1/4 absolute opacity-20"></div>
+
+    <div class="max-w-3xl mx-auto relative">
       {articles.filter(a => a.featured).map(article => (
-        <article class="relative">
-          <div class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-sage to-sage-light rounded-full"></div>
-          <span class="text-xs text-sage font-medium uppercase tracking-wide">Featured</span>
-          <h2 class="font-serif text-3xl text-charcoal mt-3 mb-4">{article.title}</h2>
-          <p class="text-lg text-charcoal-light mb-4">{article.excerpt}</p>
-          <p class="text-sm text-warm-gray">{article.date}</p>
-        </article>
+        <div class="bg-white rounded-3xl p-10 md:p-14 border-3 border-coral shadow-[0_6px_0_0_#E85555]">
+          <span class="inline-flex items-center gap-2 bg-coral/10 text-coral font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+            <span class="w-2 h-2 bg-coral rounded-full"></span>
+            FEATURED ESSAY
+          </span>
+          <h2 class="text-3xl md:text-4xl font-display font-bold text-navy mb-4">{article.title}</h2>
+          <p class="text-lg text-slate mb-6 leading-relaxed">{article.excerpt}</p>
+          <div class="flex items-center justify-between">
+            <span class="text-slate/60 font-display">{article.date}</span>
+          </div>
+        </div>
       ))}
     </div>
   </section>
 
-  <!-- Article Grid -->
-  <section class="py-16 px-8">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="font-serif text-xl mb-8 text-center text-charcoal-light">More Essays</h2>
+  <!-- ARTICLE GRID: Bold Cards -->
+  <section class="py-20 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-teal w-48 h-48 bottom-20 -left-24 absolute"></div>
+
+    <div class="max-w-4xl mx-auto relative">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-display font-bold text-navy">More Essays</h2>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
-        {articles.filter(a => !a.featured).map(article => (
-          <article class="bg-white rounded-xl p-8 border border-cream-dark hover:border-sage-light hover:shadow-md transition-all group">
-            <h3 class="font-serif text-lg text-charcoal mb-3 group-hover:text-sage transition-colors">{article.title}</h3>
-            <p class="text-sm text-charcoal-light mb-4">{article.excerpt}</p>
-            <p class="text-xs text-warm-gray">{article.date}</p>
-          </article>
-        ))}
+        {articles.filter(a => !a.featured).map((article, i) => {
+          const colors = ['violet', 'teal'];
+          const color = colors[i % colors.length];
+          const borderColor = color === 'violet' ? 'border-violet' : 'border-teal';
+          const shadowColor = color === 'violet' ? 'shadow-[0_4px_0_0_#7C3AED]' : 'shadow-[0_4px_0_0_#0891B2]';
+          const bgColor = color === 'violet' ? 'bg-violet/10' : 'bg-teal/10';
+          const textColor = color === 'violet' ? 'text-violet' : 'text-teal';
+
+          return (
+            <article class={`bg-white rounded-2xl p-8 border-3 ${borderColor} ${shadowColor} hover:-translate-y-1 transition-transform`}>
+              <div class={`inline-flex items-center gap-2 ${bgColor} ${textColor} font-display font-bold text-xs px-3 py-1 rounded-full mb-4`}>
+                ESSAY
+              </div>
+              <h3 class="font-display font-bold text-navy text-xl mb-3">{article.title}</h3>
+              <p class="text-slate text-sm leading-relaxed mb-4">{article.excerpt}</p>
+              <span class="text-slate/60 text-sm">{article.date}</span>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>
 
-  <!-- Newsletter Signup -->
-  <section class="py-20 px-8 bg-gradient-to-br from-sage/10 via-sage/5 to-transparent relative overflow-hidden">
-    <div class="blob-sage w-48 h-48 bottom-0 right-0 absolute"></div>
+  <!-- NEWSLETTER: Bold CTA -->
+  <section class="py-20 px-6 bg-gradient-to-br from-violet via-coral to-sunshine relative overflow-hidden">
+    <div class="max-w-2xl mx-auto relative text-center">
+      <div class="bg-white rounded-3xl p-10 md:p-14 border-3 border-navy shadow-[0_6px_0_0_#0F172A]">
+        <div class="inline-flex items-center gap-2 bg-sunshine/20 text-navy font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+          </svg>
+          BETWEEN SESSIONS
+        </div>
 
-    <div class="max-w-xl mx-auto text-center relative">
-      <h2 class="font-serif text-2xl mb-2">Between Sessions</h2>
-      <p class="text-charcoal-light mb-8">
-        Get new essays delivered to your inbox. No spam, just thoughts worth sharing.
-      </p>
-      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-        <input
-          type="email"
-          placeholder="Your email"
-          class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none"
-          required
-        />
-        <button
-          type="submit"
-          class="px-8 py-4 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium"
-        >
-          Subscribe
-        </button>
-      </form>
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-navy mb-4">
+          Get new essays in your inbox
+        </h2>
+
+        <p class="text-slate mb-8">
+          No spam, just thoughts worth sharing. Delivered when I have something to say.
+        </p>
+
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            class="input-bold flex-1"
+            required
+          />
+          <button
+            type="submit"
+            class="px-8 py-4 bg-violet text-white font-display font-bold rounded-xl hover:bg-violet-dark transition-all shadow-[0_4px_0_0_#7C3AED] hover:shadow-[0_2px_0_0_#7C3AED] hover:translate-y-[2px] whitespace-nowrap"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
     </div>
   </section>
 </Layout>

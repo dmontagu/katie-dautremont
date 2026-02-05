@@ -4,57 +4,66 @@ import { url } from '../utils/url';
 ---
 
 <Layout title="Contact" description="Get in touch with Katie d'Autremont for therapy inquiries, speaking engagements, or general questions.">
-  <!-- Hero -->
-  <section class="py-24 px-8 relative overflow-hidden">
-    <div class="blob-sage w-80 h-80 -top-40 -right-40 absolute"></div>
-    <div class="blob-sage w-64 h-64 bottom-0 -left-32 absolute"></div>
+  <!-- HERO: Welcoming & Bold -->
+  <section class="py-20 md:py-28 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-coral w-80 h-80 -top-40 -right-40 absolute animate-blob"></div>
+    <div class="shape-circle shape-violet w-64 h-64 bottom-0 -left-32 absolute animate-blob-delayed"></div>
 
-    <div class="max-w-2xl mx-auto relative">
+    <div class="max-w-3xl mx-auto relative">
       <div class="text-center mb-12">
-        <div class="accent-line mx-auto mb-6"></div>
-        <h1 class="text-4xl md:text-5xl text-charcoal mb-6">Get in Touch</h1>
-        <p class="text-lg text-charcoal-light max-w-xl mx-auto">
-          Whether you're interested in therapy, have a question, or just want to say hello.
+        <div class="inline-flex items-center gap-2 bg-coral/10 text-coral font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+          <span class="w-2 h-2 bg-coral rounded-full animate-pulse"></span>
+          LET'S CONNECT
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-display font-bold text-navy mb-6 leading-[1.05]">
+          Say <span class="text-gradient-vibrant">hello</span>
+        </h1>
+
+        <p class="text-xl text-slate max-w-xl mx-auto">
+          Whether you're interested in therapy, have a question, or just want to say hi.
         </p>
       </div>
 
-      <!-- Contact Form -->
-      <form class="bg-white rounded-xl p-12 border border-cream-dark shadow-sm mb-12">
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <!-- CONTACT FORM: Bold & Playful -->
+      <form class="bg-white rounded-3xl p-8 md:p-12 border-3 border-navy shadow-[0_6px_0_0_#0F172A] mb-12">
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label for="name" class="block text-sm font-medium text-charcoal mb-4">
+            <label for="name" class="block font-display font-bold text-navy mb-3">
               Name
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              class="w-full px-6 py-4 rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+              class="input-bold"
+              placeholder="What should I call you?"
               required
             />
           </div>
           <div>
-            <label for="email" class="block text-sm font-medium text-charcoal mb-4">
+            <label for="email" class="block font-display font-bold text-navy mb-3">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              class="w-full px-6 py-4 rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+              class="input-bold"
+              placeholder="your@email.com"
               required
             />
           </div>
         </div>
 
-        <div class="mb-8">
-          <label for="subject" class="block text-sm font-medium text-charcoal mb-4">
+        <div class="mb-6">
+          <label for="subject" class="block font-display font-bold text-navy mb-3">
             What's this about?
           </label>
           <select
             id="subject"
             name="subject"
-            class="w-full px-6 py-4 rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+            class="input-bold"
             required
           >
             <option value="">Select one...</option>
@@ -66,53 +75,55 @@ import { url } from '../utils/url';
         </div>
 
         <div class="mb-8">
-          <label for="message" class="block text-sm font-medium text-charcoal mb-4">
+          <label for="message" class="block font-display font-bold text-navy mb-3">
             Message
           </label>
           <textarea
             id="message"
             name="message"
             rows="5"
-            class="w-full px-6 py-4 rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors resize-none"
+            class="input-bold resize-none"
+            placeholder="Tell me what's on your mind..."
             required
           ></textarea>
         </div>
 
         <button
           type="submit"
-          class="w-full bg-sage text-cream py-6 rounded-md hover:bg-sage-dark transition-colors font-medium"
+          class="w-full py-5 bg-coral text-white font-display font-bold text-lg rounded-xl hover:bg-coral-dark transition-all shadow-[0_4px_0_0_#E85555] hover:shadow-[0_2px_0_0_#E85555] hover:translate-y-[2px]"
         >
           Send Message
         </button>
       </form>
 
-      <!-- Additional Info -->
+      <!-- INFO CARDS -->
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-sage/5 p-8 rounded-xl border border-sage-light/30 hover:border-sage-light transition-colors">
-          <div class="w-10 h-10 rounded-full bg-sage/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        <div class="bg-coral/10 rounded-2xl p-8 border-3 border-coral">
+          <div class="w-12 h-12 bg-coral rounded-xl flex items-center justify-center mb-4 shadow-[0_3px_0_0_#E85555]">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
             </svg>
           </div>
-          <h2 class="font-serif text-lg text-charcoal mb-3">For Therapy Inquiries</h2>
-          <p class="text-sm text-charcoal-light mb-4">
-            If you're interested in starting therapy, I offer a free 15-minute consultation to see if we're a good fit.
+          <h2 class="font-display font-bold text-navy text-xl mb-3">For Therapy Inquiries</h2>
+          <p class="text-slate mb-4">
+            Interested in starting therapy? I offer a free 15-minute consultation to see if we're a good fit.
           </p>
-          <a href={url('/therapy')} class="text-sage font-medium text-sm hover:text-sage-dark transition-colors inline-flex items-center gap-1">
+          <a href={url('/therapy')} class="inline-flex items-center gap-2 text-coral font-display font-bold hover:gap-3 transition-all">
             Learn more about therapy
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
           </a>
         </div>
-        <div class="bg-cream-dark/50 p-8 rounded-xl border border-cream-dark hover:border-sage-light/50 transition-colors">
-          <div class="w-10 h-10 rounded-full bg-sage/10 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+        <div class="bg-violet/10 rounded-2xl p-8 border-3 border-violet">
+          <div class="w-12 h-12 bg-violet rounded-xl flex items-center justify-center mb-4 shadow-[0_3px_0_0_#7C3AED]">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 class="font-serif text-lg text-charcoal mb-3">Response Time</h2>
-          <p class="text-sm text-charcoal-light">
+          <h2 class="font-display font-bold text-navy text-xl mb-3">Response Time</h2>
+          <p class="text-slate">
             I typically respond within 2-3 business days. If your inquiry is urgent, please indicate that in your message.
           </p>
         </div>
@@ -120,13 +131,13 @@ import { url } from '../utils/url';
     </div>
   </section>
 
-  <!-- Telehealth Note -->
-  <section class="py-12 px-8 bg-white">
-    <div class="max-w-2xl mx-auto">
-      <div class="p-8 bg-gradient-to-br from-sage/5 via-sage/10 to-sage/5 rounded-xl border-l-4 border-sage">
-        <p class="text-sm text-charcoal-light">
-          <strong class="text-charcoal">Note:</strong> All therapy sessions are conducted via secure telehealth video.
-          I am currently licensed to see clients in <strong class="text-charcoal">Montana</strong>.
+  <!-- TELEHEALTH NOTE -->
+  <section class="py-16 px-6 bg-gradient-to-r from-violet via-coral to-sunshine">
+    <div class="max-w-3xl mx-auto">
+      <div class="bg-white rounded-2xl p-8 border-l-4 border-navy">
+        <p class="text-slate">
+          <strong class="font-display text-navy">Note:</strong> All therapy sessions are conducted via secure telehealth video.
+          I am currently licensed to see clients in <strong class="text-navy">Montana</strong>.
         </p>
       </div>
     </div>

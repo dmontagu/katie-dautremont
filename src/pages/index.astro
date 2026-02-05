@@ -7,132 +7,233 @@ import katiePhoto from '../assets/katie-dautremont.jpeg';
 ---
 
 <Layout title="Home" description="Katie d'Autremont is a licensed therapist who writes, teaches, and guides people through personal growth. Therapy, writing, courses, and more.">
-  <!-- Hero Section -->
-  <section class="py-16 md:py-24 px-8">
-    <div class="max-w-5xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="order-2 md:order-1">
-          <h1 class="text-4xl md:text-5xl text-charcoal mb-6">
-            Growth is a practice,<br />not a destination.
+  <!-- HERO: Bold, Energetic, Statement-Making -->
+  <section class="relative py-20 md:py-28 px-6 overflow-hidden">
+    <!-- Floating shapes -->
+    <div class="shape-circle shape-coral w-72 h-72 -top-20 -right-20 absolute animate-blob"></div>
+    <div class="shape-circle shape-violet w-56 h-56 top-1/2 -left-20 absolute animate-blob-delayed"></div>
+    <div class="shape-circle shape-sunshine w-40 h-40 bottom-20 right-1/4 absolute animate-blob"></div>
+
+    <div class="max-w-6xl mx-auto relative">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text Content -->
+        <div class="order-2 lg:order-1">
+          <div class="inline-flex items-center gap-2 bg-violet/10 text-violet font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+            <span class="w-2 h-2 bg-violet rounded-full animate-pulse"></span>
+            Therapy that meets you where you are
+          </div>
+
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-navy mb-6 leading-[1.05]">
+            Growth is a
+            <span class="text-gradient-vibrant">practice</span>,
+            not a destination.
           </h1>
-          <p class="text-lg text-charcoal-light mb-8">
-            I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Whether you're looking for support, insight, or tools to take with you, there's a place here for you.
+
+          <p class="text-xl text-slate mb-10 max-w-lg leading-relaxed">
+            I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Let's find your path forward.
           </p>
+
           <div class="flex flex-wrap gap-4">
-            <a href={url('/therapy')} class="px-6 py-3 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium">
-              Work With Me
+            <a
+              href={url('/therapy')}
+              class="px-8 py-4 bg-coral text-white font-display font-bold text-lg rounded-xl hover:bg-coral-dark transition-all shadow-[0_4px_0_0_#E85555] hover:shadow-[0_2px_0_0_#E85555] hover:translate-y-[2px]"
+            >
+              Start Therapy
             </a>
-            <a href={url('/about')} class="px-6 py-3 border border-sage text-sage rounded-md hover:bg-sage/5 transition-colors font-medium">
-              Learn More
+            <a
+              href={url('/about')}
+              class="px-8 py-4 bg-white text-navy font-display font-bold text-lg rounded-xl border-3 border-navy hover:bg-navy hover:text-white transition-all"
+            >
+              Meet Katie
             </a>
           </div>
         </div>
-        <div class="order-1 md:order-2 flex justify-center">
-          <Image
-            src={katiePhoto}
-            alt="Katie d'Autremont, LCPC"
-            width={320}
-            class="w-64 md:w-80 rounded-2xl shadow-lg"
-            loading="eager"
-          />
+
+        <!-- Photo with playful frame -->
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- Background decoration -->
+            <div class="absolute -inset-4 bg-gradient-to-br from-coral via-violet to-teal rounded-3xl rotate-3"></div>
+            <Image
+              src={katiePhoto}
+              alt="Katie d'Autremont, LCPC"
+              width={400}
+              class="relative w-72 md:w-80 lg:w-96 rounded-2xl shadow-2xl"
+              loading="eager"
+            />
+            <!-- Floating badge -->
+            <div class="absolute -bottom-4 -left-4 bg-sunshine text-navy font-display font-bold px-4 py-2 rounded-xl shadow-lg transform -rotate-6">
+              LCPC Licensed
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pathways Section -->
-  <section class="py-16 px-8 bg-cream-dark/50">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="font-serif text-2xl text-center mb-12">Ways to Work Together</h2>
+  <!-- WHAT I OFFER: Bold Cards -->
+  <section class="py-20 px-6 bg-navy relative overflow-hidden">
+    <div class="shape-circle shape-coral w-64 h-64 -top-32 left-1/4 absolute opacity-20"></div>
+    <div class="shape-circle shape-violet w-48 h-48 bottom-0 right-1/3 absolute opacity-15"></div>
+
+    <div class="max-w-5xl mx-auto relative">
+      <div class="text-center mb-14">
+        <span class="inline-block bg-coral/20 text-coral font-display font-bold text-sm px-4 py-2 rounded-full mb-4">
+          WAYS WE CAN WORK TOGETHER
+        </span>
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-white">
+          Choose Your Path
+        </h2>
+      </div>
+
       <div class="grid md:grid-cols-2 gap-6">
         <PathwayCard
           title="One-on-One Therapy"
           description="Deep, ongoing work for those ready to explore patterns, process emotions, and create lasting change."
           href="/therapy"
           icon="therapy"
+          color="coral"
         />
         <PathwayCard
           title="Read & Reflect"
           description="Essays and reflections on therapy, emotions, and what happens between sessions."
           href="/writing"
           icon="writing"
+          color="violet"
         />
         <PathwayCard
-          title="Self-Guided Tools"
-          description="Courses and guides for working through specific challenges at your own pace."
+          title="Self-Guided Courses"
+          description="Tools and guides for working through specific challenges at your own pace."
           href="/courses"
           icon="courses"
+          color="teal"
         />
         <PathwayCard
-          title="Ask a Question"
-          description="Submit a question and I might answer it in a future post."
+          title="Ask Me Anything"
+          description="Submit a question and I might answer it in a future essay or post."
           href="/ask"
           icon="ask"
+          color="sunshine"
         />
       </div>
     </div>
   </section>
 
-  <!-- Credentials Strip -->
-  <section class="py-12 px-8">
-    <div class="max-w-4xl mx-auto">
-      <div class="flex flex-wrap justify-center gap-8 text-center">
-        <div class="px-8">
-          <p class="font-serif text-lg text-charcoal">Licensed Clinical Professional Counselor</p>
-          <p class="text-sm text-warm-gray">LCPC</p>
+  <!-- IS THIS YOU? - Bold qualifying section -->
+  <section class="py-20 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-teal w-72 h-72 -top-36 -right-36 absolute"></div>
+
+    <div class="max-w-4xl mx-auto relative">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-navy mb-4">
+          Is This <span class="text-gradient-vibrant">You</span>?
+        </h2>
+        <p class="text-xl text-slate">
+          I work best with people who...
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 border-3 border-navy shadow-[0_4px_0_0_#0F172A] text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-coral/10 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-navy text-lg mb-2">Are Curious</h3>
+          <p class="text-slate text-sm">Genuinely interested in understanding yourself and your patterns</p>
         </div>
-        <div class="hidden md:block w-px bg-cream-dark"></div>
-        <div class="px-8">
-          <p class="font-serif text-lg text-charcoal">Private Practice</p>
-          <p class="text-sm text-warm-gray">Be Balanced Counseling</p>
+
+        <div class="bg-white rounded-2xl p-8 border-3 border-navy shadow-[0_4px_0_0_#0F172A] text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-violet/10 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-violet" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-navy text-lg mb-2">Are Ready</h3>
+          <p class="text-slate text-sm">Have some stability and are prepared to do the work growth requires</p>
         </div>
-        <div class="hidden md:block w-px bg-cream-dark"></div>
-        <div class="px-8">
-          <p class="font-serif text-lg text-charcoal">Specializing In</p>
-          <p class="text-sm text-warm-gray">Anxiety, Depression, Life Transitions</p>
+
+        <div class="bg-white rounded-2xl p-8 border-3 border-navy shadow-[0_4px_0_0_#0F172A] text-center">
+          <div class="w-16 h-16 mx-auto mb-4 bg-teal/10 rounded-2xl flex items-center justify-center">
+            <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-navy text-lg mb-2">Want More</h3>
+          <p class="text-slate text-sm">Looking for support, insight, or tools to take with you on your journey</p>
+        </div>
+      </div>
+
+      <p class="text-center text-slate mt-10 max-w-2xl mx-auto">
+        You don't need to have it all figured out. But if you're ready to look inward and ask hard questions, there's a place here for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS: Bold, Visual Strip -->
+  <section class="py-16 px-6 bg-gradient-to-r from-coral via-violet to-teal">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 text-center text-white">
+        <div>
+          <p class="font-display font-bold text-2xl">LCPC</p>
+          <p class="text-white/80 text-sm">Licensed Clinical Professional Counselor</p>
+        </div>
+        <div class="hidden md:block w-px h-12 bg-white/30"></div>
+        <div>
+          <p class="font-display font-bold text-2xl">Be Balanced</p>
+          <p class="text-white/80 text-sm">Private Practice</p>
+        </div>
+        <div class="hidden md:block w-px h-12 bg-white/30"></div>
+        <div>
+          <p class="font-display font-bold text-2xl">Specializing In</p>
+          <p class="text-white/80 text-sm">Anxiety, Depression, Life Transitions</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Philosophy Section with background -->
-  <section class="py-16 px-8 relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-sage/10 via-sage/5 to-transparent"></div>
-    <div class="max-w-2xl mx-auto text-center relative">
-      <h2 class="font-serif text-2xl mb-6">Who This Is For</h2>
-      <p class="text-charcoal-light mb-6">
-        I work best with people who have some stability in their lives and are genuinely curious about themselves. You don't need to have it all figured out — but you're ready to look inward, ask hard questions, and do the work that real growth requires.
-      </p>
-      <p class="text-charcoal-light">
-        If you're in crisis or need immediate support, I've included resources in the footer. There's no shame in needing a different kind of help right now.
-      </p>
-    </div>
-  </section>
+  <!-- NEWSLETTER: Bold CTA -->
+  <section class="py-20 px-6 relative overflow-hidden">
+    <div class="shape-circle shape-violet w-64 h-64 -bottom-32 -left-32 absolute"></div>
+    <div class="shape-circle shape-sunshine w-48 h-48 top-10 right-10 absolute"></div>
 
-  <!-- Newsletter Section -->
-  <section class="py-16 px-8 bg-white">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="font-serif text-2xl mb-4">Between Sessions</h2>
-      <p class="text-charcoal-light mb-8">
-        Thoughts on therapy, emotions, and the work that happens outside the room. Delivered when I have something worth saying.
-      </p>
-      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-        <input
-          type="email"
-          placeholder="Your email"
-          class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-cream/50 focus:border-sage focus:outline-none focus:bg-white transition-colors"
-          required
-        />
-        <button
-          type="submit"
-          class="px-8 py-4 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium"
-        >
-          Subscribe
-        </button>
-      </form>
-      <p class="text-xs text-warm-gray mt-4">
-        Or follow on <a href="https://substack.com/@katiebetweensessions" class="underline hover:text-sage" target="_blank" rel="noopener">Substack</a>
-      </p>
+    <div class="max-w-2xl mx-auto relative">
+      <div class="bg-white rounded-3xl p-10 md:p-14 border-3 border-navy shadow-[0_6px_0_0_#0F172A] text-center">
+        <div class="inline-flex items-center gap-2 bg-sunshine/20 text-navy font-display font-bold text-sm px-4 py-2 rounded-full mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+          </svg>
+          BETWEEN SESSIONS
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-display font-bold text-navy mb-4">
+          Thoughts on therapy, emotions, and the work that happens outside the room.
+        </h2>
+
+        <p class="text-slate mb-8">
+          Delivered when I have something worth saying. No spam, just insight.
+        </p>
+
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="your@email.com"
+            class="input-bold flex-1"
+            required
+          />
+          <button
+            type="submit"
+            class="px-8 py-4 bg-coral text-white font-display font-bold rounded-xl hover:bg-coral-dark transition-all shadow-[0_4px_0_0_#E85555] hover:shadow-[0_2px_0_0_#E85555] hover:translate-y-[2px] whitespace-nowrap"
+          >
+            Subscribe
+          </button>
+        </form>
+
+        <p class="text-sm text-slate mt-4">
+          Or follow on <a href="https://substack.com/@katiebetweensessions" class="text-violet font-bold hover:underline" target="_blank" rel="noopener">Substack</a>
+        </p>
+      </div>
     </div>
   </section>
 </Layout>
