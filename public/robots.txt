@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmontagu.github.io/katie-dautremont/sitemap-index.xml

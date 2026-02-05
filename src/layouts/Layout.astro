@@ -6,9 +6,18 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
 
-const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Professional Counselor, Writer, and Guide" } = Astro.props;
+const {
+  title,
+  description = "Katie d'Autremont, LCPC - Licensed Clinical Professional Counselor, Writer, and Guide",
+  image = "/og-image.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(url(image), Astro.site);
+const fullTitle = `${title} | Be Balanced`;
 ---
 
 <!DOCTYPE html>
@@ -19,11 +28,52 @@ const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Profes
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta property="og:site_name" content="Be Balanced Counseling" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-    <title>{title} | Be Balanced</title>
+
+    <title>{fullTitle}</title>
     <ViewTransitions />
+
+    <!-- Structured Data for Therapist/Local Business -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Be Balanced Counseling",
+      "description": "Katie d'Autremont, LCPC - Licensed Clinical Professional Counselor specializing in anxiety, depression, and life transitions.",
+      "url": canonicalURL.origin + url('/'),
+      "@id": canonicalURL.origin + url('/'),
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Katie d'Autremont",
+        "jobTitle": "Licensed Clinical Professional Counselor",
+        "credential": "LCPC"
+      },
+      "sameAs": [
+        "https://substack.com/@katiebetweensessions"
+      ]
+    })} />
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="sticky top-0 z-50 py-6 px-8 bg-white/80 backdrop-blur-md border-b border-cream-dark/50">
