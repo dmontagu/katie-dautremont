@@ -1,4 +1,6 @@
 ---
+import { url } from '../utils/url';
+
 interface Props {
   title: string;
   description: string;
@@ -17,19 +19,14 @@ const icons = {
 ---
 
 <a
-  href={href}
-  class="group block bg-white rounded-xl p-8 shadow-sm border border-cream-dark hover:shadow-md hover:border-sage-light transition-all duration-200"
+  href={url(href)}
+  class="group block bg-white/70 border border-cream-dark/60 rounded-2xl p-7 hover:bg-white hover:border-sage/30 transition-all duration-300"
 >
-  <div class="flex items-start gap-6">
-    <div class="w-12 h-12 rounded-lg bg-sage/10 flex items-center justify-center text-sage group-hover:bg-sage group-hover:text-cream transition-colors">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[icon]} />
+  <div class="flex items-start gap-5">
+    <svg class="w-5 h-5 mt-1 text-sage/70 group-hover:text-sage shrink-0 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[icon]} />
+    <div>
+      <h3 class="font-serif text-lg text-charcoal group-hover:text-sage transition-colors duration-300">{title}</h3>
+      <p class="text-sm text-charcoal-light mt-1.5 leading-relaxed">{description}</p>
     </div>
-    <div class="flex-1">
-      <h3 class="font-serif text-lg text-charcoal group-hover:text-sage transition-colors">{title}</h3>
-      <p class="text-sm text-charcoal-light mt-2">{description}</p>
-    </div>
-    <svg class="w-5 h-5 text-warm-gray group-hover:text-sage group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-    </svg>
   </div>
 </a>

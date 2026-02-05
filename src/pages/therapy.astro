@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { url } from '../utils/url';
 ---
 
 <Layout title="Therapy" description="Individual therapy for anxiety, depression, relational issues, and life transitions. Learn about working with Katie d'Autremont, LCPC.">
@@ -116,7 +117,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-charcoal-light mb-8">
         Start with a free 15-minute consultation to see if we're a good fit.
       </p>
-      <a href="/contact" class="inline-block bg-sage text-cream px-10 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium">
+      <a href={url('/contact')} class="inline-block bg-sage text-cream px-10 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium">
         Request a Consultation
       </a>
     </div>

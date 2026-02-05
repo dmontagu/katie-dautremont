@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { url } from '../utils/url';
 ---
 
 <Layout title="Terms of Service" description="Terms of service for Be Balanced Counseling website.">
@@ -34,7 +35,7 @@ import Layout from '../layouts/Layout.astro';
 
         <h2 class="font-serif text-xl text-charcoal mt-12 mb-6">Contact</h2>
         <p>
-          If you have questions about these terms, please <a href="/contact" class="text-sage hover:text-sage-dark">contact us</a>.
+          If you have questions about these terms, please <a href={url('/contact')} class="text-sage hover:text-sage-dark">contact us</a>.
         </p>
       </div>
     </div>

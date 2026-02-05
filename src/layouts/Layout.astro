@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import { url } from '../utils/url';
 
 interface Props {
   title: string;
@@ -13,7 +14,7 @@ const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Profes
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={url('/favicon.svg')} />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
@@ -25,16 +26,16 @@ const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Profes
   <body class="min-h-screen flex flex-col">
     <header class="sticky top-0 z-50 py-6 px-8 bg-white/80 backdrop-blur-md border-b border-cream-dark/50">
       <nav class="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="/" class="font-serif text-xl text-charcoal hover:text-sage transition-colors">
+        <a href={url('/')} class="font-serif text-xl text-charcoal hover:text-sage transition-colors">
           Be Balanced
         </a>
         <ul class="hidden md:flex items-center gap-8 text-sm">
-          <li><a href="/about" class="text-charcoal-light hover:text-sage transition-colors">About</a></li>
-          <li><a href="/therapy" class="text-charcoal-light hover:text-sage transition-colors">Therapy</a></li>
-          <li><a href="/writing" class="text-charcoal-light hover:text-sage transition-colors">Writing</a></li>
-          <li><a href="/courses" class="text-charcoal-light hover:text-sage transition-colors">Courses</a></li>
-          <li><a href="/ask" class="text-charcoal-light hover:text-sage transition-colors">Ask</a></li>
-          <li><a href="/contact" class="bg-sage text-cream px-6 py-2 rounded-md hover:bg-sage-dark transition-colors">Contact</a></li>
+          <li><a href={url('/about')} class="text-charcoal-light hover:text-sage transition-colors">About</a></li>
+          <li><a href={url('/therapy')} class="text-charcoal-light hover:text-sage transition-colors">Therapy</a></li>
+          <li><a href={url('/writing')} class="text-charcoal-light hover:text-sage transition-colors">Writing</a></li>
+          <li><a href={url('/courses')} class="text-charcoal-light hover:text-sage transition-colors">Courses</a></li>
+          <li><a href={url('/ask')} class="text-charcoal-light hover:text-sage transition-colors">Ask</a></li>
+          <li><a href={url('/contact')} class="bg-sage text-cream px-6 py-2 rounded-md hover:bg-sage-dark transition-colors">Contact</a></li>
         </ul>
         <button class="md:hidden text-charcoal" aria-label="Menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,17 +62,17 @@ const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Profes
           <div>
             <h4 class="font-medium mb-4 text-sm">Navigate</h4>
             <ul class="text-sm text-charcoal-light space-y-2">
-              <li><a href="/about" class="hover:text-sage transition-colors">About</a></li>
-              <li><a href="/therapy" class="hover:text-sage transition-colors">Therapy</a></li>
-              <li><a href="/writing" class="hover:text-sage transition-colors">Writing</a></li>
-              <li><a href="/courses" class="hover:text-sage transition-colors">Courses</a></li>
+              <li><a href={url('/about')} class="hover:text-sage transition-colors">About</a></li>
+              <li><a href={url('/therapy')} class="hover:text-sage transition-colors">Therapy</a></li>
+              <li><a href={url('/writing')} class="hover:text-sage transition-colors">Writing</a></li>
+              <li><a href={url('/courses')} class="hover:text-sage transition-colors">Courses</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-medium mb-4 text-sm">Connect</h4>
             <ul class="text-sm text-charcoal-light space-y-2">
               <li><a href="https://substack.com/@katiebetweensessions" class="hover:text-sage transition-colors" target="_blank" rel="noopener">Substack</a></li>
-              <li><a href="/contact" class="hover:text-sage transition-colors">Contact</a></li>
+              <li><a href={url('/contact')} class="hover:text-sage transition-colors">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -81,8 +82,8 @@ const { title, description = "Katie d'Autremont, LCPC - Licensed Clinical Profes
           </p>
           <p>
             &copy; {new Date().getFullYear()} Be Balanced Counseling. All rights reserved. |
-            <a href="/privacy" class="hover:text-sage">Privacy</a> |
-            <a href="/terms" class="hover:text-sage">Terms</a>
+            <a href={url('/privacy')} class="hover:text-sage">Privacy</a> |
+            <a href={url('/terms')} class="hover:text-sage">Terms</a>
           </p>
         </div>
       </div>

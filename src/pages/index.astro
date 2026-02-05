@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PathwayCard from '../components/PathwayCard.astro';
+import { url } from '../utils/url';
 ---
 
 <Layout title="Home" description="Katie d'Autremont is a licensed therapist who writes, teaches, and guides people through personal growth. Therapy, writing, courses, and more.">
@@ -16,17 +17,17 @@ import PathwayCard from '../components/PathwayCard.astro';
             I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Whether you're looking for support, insight, or tools to take with you, there's a place here for you.
           </p>
           <div class="flex flex-wrap gap-4">
-            <a href="/therapy" class="px-6 py-3 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium">
+            <a href={url('/therapy')} class="px-6 py-3 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium">
               Work With Me
             </a>
-            <a href="/about" class="px-6 py-3 border border-sage text-sage rounded-md hover:bg-sage/5 transition-colors font-medium">
+            <a href={url('/about')} class="px-6 py-3 border border-sage text-sage rounded-md hover:bg-sage/5 transition-colors font-medium">
               Learn More
             </a>
           </div>
         </div>
         <div class="order-1 md:order-2 flex justify-center">
           <img
-            src="/katie-dautremont.jpeg"
+            src={url('/katie-dautremont.jpeg')}
             alt="Katie d'Autremont, LCPC"
             class="w-64 md:w-80 rounded-2xl shadow-lg"
           />
