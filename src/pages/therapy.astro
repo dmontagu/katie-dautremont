@@ -2,88 +2,129 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Therapy" description="Individual therapy for anxiety, depression, relational issues, and life transitions. Learn about working with Katie d'Autremont, LCSW.">
-  <section class="py-24 px-8">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-6 text-center">One-on-One Therapy</h1>
-      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-12">
-        Deep, ongoing work for those ready to explore patterns, process emotions, and create lasting change.
-      </p>
+<Layout title="Therapy" description="Individual therapy for anxiety, depression, relational issues, and life transitions. Learn about working with Katie d'Autremont, LCPC.">
+  <!-- Hero with decorative elements -->
+  <section class="py-24 px-8 relative overflow-hidden">
+    <!-- Decorative blobs -->
+    <div class="blob-sage w-96 h-96 -top-48 -right-48 absolute"></div>
+    <div class="blob-sage w-64 h-64 bottom-0 -left-32 absolute"></div>
+
+    <div class="max-w-3xl mx-auto relative">
+      <div class="text-center mb-16">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h1 class="text-4xl md:text-5xl text-charcoal mb-6">One-on-One Therapy</h1>
+        <p class="text-lg text-charcoal-light max-w-2xl mx-auto">
+          Deep, ongoing work for those ready to explore patterns, process emotions, and create lasting change.
+        </p>
+      </div>
 
       <!-- Who It's For -->
-      <div class="mb-12">
+      <div class="mb-16">
         <h2 class="font-serif text-2xl mb-6">Who This Is For</h2>
         <p class="text-charcoal-light mb-6">
           I work with adults who are navigating:
         </p>
-        <ul class="space-y-4 text-charcoal-light">
-          <li class="flex items-start gap-4">
-            <span class="text-sage mt-1">•</span>
-            <span><strong class="text-charcoal">Anxiety</strong> — persistent worry, racing thoughts, difficulty being present</span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-sage mt-1">•</span>
-            <span><strong class="text-charcoal">Depression</strong> — low mood, lack of motivation, feeling stuck</span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-sage mt-1">•</span>
-            <span><strong class="text-charcoal">Relational issues</strong> — patterns in relationships, boundaries, communication</span>
-          </li>
-          <li class="flex items-start gap-4">
-            <span class="text-sage mt-1">•</span>
-            <span><strong class="text-charcoal">Life transitions</strong> — career changes, moves, identity shifts, becoming a parent</span>
-          </li>
-        </ul>
-        <p class="text-charcoal-light mt-6">
-          My ideal clients have some stability in their lives and are genuinely curious about themselves. You don't need to have it all figured out — but you're ready to look inward and do the work.
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="bg-white p-6 rounded-xl border border-cream-dark">
+            <h3 class="font-medium text-charcoal mb-2">Anxiety</h3>
+            <p class="text-sm text-charcoal-light">Persistent worry, racing thoughts, difficulty being present</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-cream-dark">
+            <h3 class="font-medium text-charcoal mb-2">Depression</h3>
+            <p class="text-sm text-charcoal-light">Low mood, lack of motivation, feeling stuck</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-cream-dark">
+            <h3 class="font-medium text-charcoal mb-2">Relational Issues</h3>
+            <p class="text-sm text-charcoal-light">Patterns in relationships, boundaries, communication</p>
+          </div>
+          <div class="bg-white p-6 rounded-xl border border-cream-dark">
+            <h3 class="font-medium text-charcoal mb-2">Life Transitions</h3>
+            <p class="text-sm text-charcoal-light">Career changes, moves, identity shifts, becoming a parent</p>
+          </div>
+        </div>
+        <p class="text-charcoal-light mt-6 text-center italic">
+          My ideal clients have some stability in their lives and are genuinely curious about themselves.
         </p>
       </div>
+    </div>
+  </section>
 
-      <!-- What Sessions Are Like -->
-      <div class="mb-12 bg-sage/5 p-8 rounded-xl">
-        <h2 class="font-serif text-2xl mb-6">What Sessions Are Like</h2>
-        <p class="text-charcoal-light mb-6">
+  <!-- What Sessions Are Like - Full width band -->
+  <section class="py-16 px-8 bg-sage/5 relative">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-2xl mb-6 text-center">What Sessions Are Like</h2>
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="text-charcoal-light mb-4">
           Sessions are 50 minutes, held weekly or biweekly depending on your needs. We meet via secure video.
         </p>
         <p class="text-charcoal-light">
           My approach is collaborative and insight-oriented. We'll explore patterns, process emotions, and work toward the changes you want to make. I draw from various evidence-based approaches, tailored to what works for you.
         </p>
       </div>
+    </div>
+  </section>
 
-      <!-- Logistics -->
-      <div class="mb-12">
-        <h2 class="font-serif text-2xl mb-6">Logistics</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-xl border border-cream-dark">
-            <p class="font-medium text-charcoal mb-2">Session Format</p>
-            <p class="text-sm text-charcoal-light">50-minute sessions via secure telehealth</p>
+  <!-- Logistics -->
+  <section class="py-16 px-8">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-2xl mb-8 text-center">Logistics</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="text-center p-6">
+          <div class="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
           </div>
-          <div class="bg-white p-6 rounded-xl border border-cream-dark">
-            <p class="font-medium text-charcoal mb-2">Frequency</p>
-            <p class="text-sm text-charcoal-light">Weekly or biweekly</p>
+          <p class="font-medium text-charcoal text-sm">Format</p>
+          <p class="text-xs text-charcoal-light mt-1">50-min video sessions</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
           </div>
-          <div class="bg-white p-6 rounded-xl border border-cream-dark">
-            <p class="font-medium text-charcoal mb-2">Rates</p>
-            <p class="text-sm text-charcoal-light">Available upon request</p>
+          <p class="font-medium text-charcoal text-sm">Frequency</p>
+          <p class="text-xs text-charcoal-light mt-1">Weekly or biweekly</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
           </div>
-          <div class="bg-white p-6 rounded-xl border border-cream-dark">
-            <p class="font-medium text-charcoal mb-2">Insurance</p>
-            <p class="text-sm text-charcoal-light">Out-of-network; superbills provided</p>
+          <p class="font-medium text-charcoal text-sm">Rates</p>
+          <p class="text-xs text-charcoal-light mt-1">Available on request</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-12 h-12 rounded-full bg-sage/10 flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
           </div>
+          <p class="font-medium text-charcoal text-sm">Insurance</p>
+          <p class="text-xs text-charcoal-light mt-1">Superbills provided</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- CTA -->
-      <div class="text-center mb-12">
-        <a href="/contact" class="inline-block bg-sage text-cream px-12 py-6 rounded-md hover:bg-sage-dark transition-colors font-medium">
-          Request a Consultation
-        </a>
-        <p class="text-sm text-warm-gray mt-4">
-          Free 15-minute call to see if we're a good fit
-        </p>
-      </div>
+  <!-- CTA -->
+  <section class="py-16 px-8 bg-white">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="font-serif text-2xl mb-4">Ready to Begin?</h2>
+      <p class="text-charcoal-light mb-8">
+        Start with a free 15-minute consultation to see if we're a good fit.
+      </p>
+      <a href="/contact" class="inline-block bg-sage text-cream px-10 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium">
+        Request a Consultation
+      </a>
+    </div>
+  </section>
 
-      <!-- Disclaimer -->
+  <!-- Disclaimer -->
+  <section class="py-12 px-8">
+    <div class="max-w-3xl mx-auto">
       <div class="bg-cream-dark/50 p-8 rounded-xl border-l-4 border-sage">
         <p class="text-sm text-charcoal-light mb-4">
           <strong class="text-charcoal">Licensing Note:</strong> I am licensed to provide therapy to clients located in [State(s)]. If you're outside these areas, I'd be happy to help you find a provider in your state.

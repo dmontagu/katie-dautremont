@@ -2,17 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About" description="Learn about Katie d'Autremont, a licensed clinical social worker specializing in anxiety, depression, and life transitions.">
-  <section class="py-24 px-8">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-12 text-center">About Katie</h1>
+<Layout title="About" description="Learn about Katie d'Autremont, a licensed clinical professional counselor specializing in anxiety, depression, and life transitions.">
+  <section class="py-24 px-8 relative overflow-hidden">
+    <div class="blob-sage w-80 h-80 -top-40 -right-40 absolute"></div>
+    <div class="blob-sage w-64 h-64 bottom-20 -left-32 absolute"></div>
+
+    <div class="max-w-3xl mx-auto relative">
+      <div class="text-center mb-12">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h1 class="text-4xl md:text-5xl text-charcoal">About Katie</h1>
+      </div>
 
       <div class="grid md:grid-cols-3 gap-12 items-start">
         <!-- Photo -->
         <div class="md:col-span-1">
           <img
             src="/katie-dautremont.jpeg"
-            alt="Katie d'Autremont, LCSW"
+            alt="Katie d'Autremont, LCPC"
             class="w-full rounded-xl shadow-md"
           />
         </div>
@@ -20,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Bio -->
         <div class="md:col-span-2 space-y-6">
           <p class="text-lg text-charcoal">
-            I'm Katie d'Autremont, a licensed clinical social worker with a private practice focused on helping people navigate anxiety, depression, relational challenges, and life transitions.
+            I'm Katie d'Autremont, a licensed clinical professional counselor with a private practice focused on helping people navigate anxiety, depression, relational challenges, and life transitions.
           </p>
 
           <p class="text-charcoal-light">
@@ -54,8 +60,8 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="font-serif text-2xl mb-8 text-center">Credentials & Training</h2>
         <div class="grid md:grid-cols-2 gap-8 text-center">
           <div class="bg-white p-8 rounded-xl border border-cream-dark">
-            <p class="font-medium text-charcoal">Licensed Clinical Social Worker</p>
-            <p class="text-sm text-warm-gray mt-2">LCSW</p>
+            <p class="font-medium text-charcoal">Licensed Clinical Professional Counselor</p>
+            <p class="text-sm text-warm-gray mt-2">LCPC</p>
           </div>
           <div class="bg-white p-8 rounded-xl border border-cream-dark">
             <p class="font-medium text-charcoal">Private Practice</p>

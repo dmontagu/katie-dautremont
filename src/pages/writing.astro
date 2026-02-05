@@ -22,68 +22,92 @@ const articles = [
 ];
 ---
 
-<Layout title="Writing" description="Essays and reflections on therapy, emotions, and personal growth from Katie d'Autremont, LCSW.">
-  <section class="py-24 px-8">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-6 text-center">Read & Reflect</h1>
-      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-8">
-        Essays and reflections on therapy, emotions, and what happens between sessions.
-      </p>
+<Layout title="Writing" description="Essays and reflections on therapy, emotions, and personal growth from Katie d'Autremont, LCPC.">
+  <!-- Hero -->
+  <section class="py-24 px-8 relative overflow-hidden">
+    <div class="blob-sage w-80 h-80 -top-40 -left-40 absolute"></div>
+    <div class="blob-sage w-64 h-64 top-20 -right-32 absolute"></div>
+
+    <div class="max-w-3xl mx-auto relative">
+      <div class="text-center mb-12">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h1 class="text-4xl md:text-5xl text-charcoal mb-6">Read & Reflect</h1>
+        <p class="text-lg text-charcoal-light max-w-2xl mx-auto">
+          Essays and reflections on therapy, emotions, and what happens between sessions.
+        </p>
+      </div>
 
       <!-- Substack CTA -->
-      <div class="text-center mb-12">
+      <div class="text-center">
         <a
           href="https://substack.com/@katiebetweensessions"
           target="_blank"
           rel="noopener"
-          class="inline-block bg-sage text-cream px-8 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium"
+          class="inline-flex items-center gap-2 bg-sage text-cream px-8 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium"
         >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+          </svg>
           Subscribe on Substack
         </a>
       </div>
+    </div>
+  </section>
 
-      <!-- Featured Article -->
+  <!-- Featured Article -->
+  <section class="py-16 px-8 bg-white">
+    <div class="max-w-3xl mx-auto">
       {articles.filter(a => a.featured).map(article => (
-        <article class="bg-white rounded-xl p-12 border border-cream-dark mb-12">
+        <article class="relative">
+          <div class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-sage to-sage-light rounded-full"></div>
           <span class="text-xs text-sage font-medium uppercase tracking-wide">Featured</span>
-          <h2 class="font-serif text-2xl text-charcoal mt-4 mb-6">{article.title}</h2>
-          <p class="text-charcoal-light mb-6">{article.excerpt}</p>
+          <h2 class="font-serif text-3xl text-charcoal mt-3 mb-4">{article.title}</h2>
+          <p class="text-lg text-charcoal-light mb-4">{article.excerpt}</p>
           <p class="text-sm text-warm-gray">{article.date}</p>
         </article>
       ))}
+    </div>
+  </section>
 
-      <!-- Article Grid -->
-      <div class="grid md:grid-cols-2 gap-6 mb-12">
+  <!-- Article Grid -->
+  <section class="py-16 px-8">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-xl mb-8 text-center text-charcoal-light">More Essays</h2>
+      <div class="grid md:grid-cols-2 gap-6">
         {articles.filter(a => !a.featured).map(article => (
-          <article class="bg-white rounded-xl p-8 border border-cream-dark hover:border-sage-light transition-colors">
-            <h3 class="font-serif text-lg text-charcoal mb-4">{article.title}</h3>
-            <p class="text-sm text-charcoal-light mb-6">{article.excerpt}</p>
+          <article class="bg-white rounded-xl p-8 border border-cream-dark hover:border-sage-light hover:shadow-md transition-all group">
+            <h3 class="font-serif text-lg text-charcoal mb-3 group-hover:text-sage transition-colors">{article.title}</h3>
+            <p class="text-sm text-charcoal-light mb-4">{article.excerpt}</p>
             <p class="text-xs text-warm-gray">{article.date}</p>
           </article>
         ))}
       </div>
+    </div>
+  </section>
 
-      <!-- Newsletter Signup -->
-      <div class="bg-sage/5 rounded-xl p-12 text-center">
-        <h2 class="font-serif text-xl mb-4">Between Sessions</h2>
-        <p class="text-charcoal-light mb-8 text-sm">
-          Get new essays delivered to your inbox. No spam, just thoughts worth sharing.
-        </p>
-        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Your email"
-            class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none text-sm"
-            required
-          />
-          <button
-            type="submit"
-            class="px-8 py-4 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium text-sm"
-          >
-            Subscribe
-          </button>
-        </form>
-      </div>
+  <!-- Newsletter Signup -->
+  <section class="py-20 px-8 bg-gradient-to-br from-sage/10 via-sage/5 to-transparent relative overflow-hidden">
+    <div class="blob-sage w-48 h-48 bottom-0 right-0 absolute"></div>
+
+    <div class="max-w-xl mx-auto text-center relative">
+      <h2 class="font-serif text-2xl mb-2">Between Sessions</h2>
+      <p class="text-charcoal-light mb-8">
+        Get new essays delivered to your inbox. No spam, just thoughts worth sharing.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="Your email"
+          class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="px-8 py-4 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium"
+        >
+          Subscribe
+        </button>
+      </form>
     </div>
   </section>
 </Layout>

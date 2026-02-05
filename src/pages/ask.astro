@@ -3,15 +3,22 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Ask a Question" description="Submit a question about therapy, emotions, or personal growth. Katie might answer it in a future post.">
-  <section class="py-24 px-8">
-    <div class="max-w-2xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-6 text-center">Ask a Question</h1>
-      <p class="text-lg text-charcoal-light text-center max-w-xl mx-auto mb-12">
-        Submit a question and I might answer it in a future post.
-      </p>
+  <!-- Hero -->
+  <section class="py-24 px-8 relative overflow-hidden">
+    <div class="blob-sage w-72 h-72 -top-36 -left-36 absolute"></div>
+    <div class="blob-sage w-56 h-56 top-20 -right-28 absolute"></div>
+
+    <div class="max-w-2xl mx-auto relative">
+      <div class="text-center mb-12">
+        <div class="accent-line mx-auto mb-6"></div>
+        <h1 class="text-4xl md:text-5xl text-charcoal mb-6">Ask a Question</h1>
+        <p class="text-lg text-charcoal-light max-w-xl mx-auto">
+          Submit a question and I might answer it in a future post.
+        </p>
+      </div>
 
       <!-- Form -->
-      <form class="bg-white rounded-xl p-12 border border-cream-dark mb-12">
+      <form class="bg-white rounded-xl p-12 border border-cream-dark shadow-sm mb-12">
         <div class="mb-8">
           <label for="question" class="block text-sm font-medium text-charcoal mb-4">
             Your Question
@@ -74,23 +81,31 @@ import Layout from '../layouts/Layout.astro';
       </form>
 
       <!-- Disclaimer -->
-      <div class="bg-cream-dark/50 p-8 rounded-xl">
+      <div class="bg-gradient-to-br from-sage/5 via-sage/10 to-sage/5 p-8 rounded-xl border-l-4 border-sage">
         <h2 class="font-medium text-charcoal mb-4">A few things to know:</h2>
         <ul class="text-sm text-charcoal-light space-y-4">
           <li class="flex items-start gap-4">
-            <span class="text-sage">•</span>
+            <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <span>I read every question but can't respond to all of them individually.</span>
           </li>
           <li class="flex items-start gap-4">
-            <span class="text-sage">•</span>
+            <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
             <span>Selected questions may be answered in future essays or posts (anonymously, unless you specify otherwise).</span>
           </li>
           <li class="flex items-start gap-4">
-            <span class="text-sage">•</span>
+            <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
             <span>This is not a substitute for therapy. I cannot provide personalized mental health advice through this form.</span>
           </li>
           <li class="flex items-start gap-4">
-            <span class="text-sage">•</span>
+            <svg class="w-5 h-5 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
             <span>If you're in crisis, please reach out to the 988 Suicide & Crisis Lifeline or go to your nearest emergency room.</span>
           </li>
         </ul>

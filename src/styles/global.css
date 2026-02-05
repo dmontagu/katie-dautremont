@@ -47,3 +47,49 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-sage-light);
   color: var(--color-charcoal);
 }
+
+/* Subtle noise texture overlay */
+.texture-noise {
+  position: relative;
+}
+
+.texture-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.texture-noise > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative blob shapes */
+.blob-sage {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-sage-light) 0%, var(--color-sage) 100%);
+  opacity: 0.1;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+/* Decorative line accent */
+.accent-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-sage) 0%, var(--color-sage-light) 100%);
+  border-radius: 2px;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-charcoal-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
