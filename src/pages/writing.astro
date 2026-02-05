@@ -23,20 +23,20 @@ const articles = [
 ---
 
 <Layout title="Writing" description="Essays and reflections on therapy, emotions, and personal growth from Katie d'Autremont, LCSW.">
-  <section class="py-3xl px-lg">
+  <section class="py-24 px-8">
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Read & Reflect</h1>
-      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-lg">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-6 text-center">Read & Reflect</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-8">
         Essays and reflections on therapy, emotions, and what happens between sessions.
       </p>
 
       <!-- Substack CTA -->
-      <div class="text-center mb-xl">
+      <div class="text-center mb-12">
         <a
           href="https://substack.com/@katiebetweensessions"
           target="_blank"
           rel="noopener"
-          class="inline-block bg-sage text-cream px-lg py-sm rounded-md hover:bg-sage-dark transition-colors font-medium"
+          class="inline-block bg-sage text-cream px-8 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium"
         >
           Subscribe on Substack
         </a>
@@ -44,41 +44,41 @@ const articles = [
 
       <!-- Featured Article -->
       {articles.filter(a => a.featured).map(article => (
-        <article class="bg-white rounded-xl p-xl border border-cream-dark mb-xl">
+        <article class="bg-white rounded-xl p-12 border border-cream-dark mb-12">
           <span class="text-xs text-sage font-medium uppercase tracking-wide">Featured</span>
-          <h2 class="font-serif text-2xl text-charcoal mt-sm mb-md">{article.title}</h2>
-          <p class="text-charcoal-light mb-md">{article.excerpt}</p>
+          <h2 class="font-serif text-2xl text-charcoal mt-4 mb-6">{article.title}</h2>
+          <p class="text-charcoal-light mb-6">{article.excerpt}</p>
           <p class="text-sm text-warm-gray">{article.date}</p>
         </article>
       ))}
 
       <!-- Article Grid -->
-      <div class="grid md:grid-cols-2 gap-md mb-xl">
+      <div class="grid md:grid-cols-2 gap-6 mb-12">
         {articles.filter(a => !a.featured).map(article => (
-          <article class="bg-white rounded-xl p-lg border border-cream-dark hover:border-sage-light transition-colors">
-            <h3 class="font-serif text-lg text-charcoal mb-sm">{article.title}</h3>
-            <p class="text-sm text-charcoal-light mb-md">{article.excerpt}</p>
+          <article class="bg-white rounded-xl p-8 border border-cream-dark hover:border-sage-light transition-colors">
+            <h3 class="font-serif text-lg text-charcoal mb-4">{article.title}</h3>
+            <p class="text-sm text-charcoal-light mb-6">{article.excerpt}</p>
             <p class="text-xs text-warm-gray">{article.date}</p>
           </article>
         ))}
       </div>
 
       <!-- Newsletter Signup -->
-      <div class="bg-sage/5 rounded-xl p-xl text-center">
-        <h2 class="font-serif text-xl mb-sm">Between Sessions</h2>
-        <p class="text-charcoal-light mb-lg text-sm">
+      <div class="bg-sage/5 rounded-xl p-12 text-center">
+        <h2 class="font-serif text-xl mb-4">Between Sessions</h2>
+        <p class="text-charcoal-light mb-8 text-sm">
           Get new essays delivered to your inbox. No spam, just thoughts worth sharing.
         </p>
-        <form class="flex flex-col sm:flex-row gap-sm max-w-md mx-auto">
+        <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
           <input
             type="email"
             placeholder="Your email"
-            class="flex-1 px-md py-sm rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none text-sm"
+            class="flex-1 px-6 py-4 rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none text-sm"
             required
           />
           <button
             type="submit"
-            class="px-lg py-sm bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium text-sm"
+            class="px-8 py-4 bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium text-sm"
           >
             Subscribe
           </button>

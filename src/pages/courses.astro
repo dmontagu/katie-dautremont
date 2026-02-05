@@ -25,24 +25,24 @@ const courses = [
 ---
 
 <Layout title="Courses" description="Self-guided courses and tools for personal growth from Katie d'Autremont, LCSW.">
-  <section class="py-3xl px-lg">
+  <section class="py-24 px-8">
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Self-Guided Tools</h1>
-      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-xl">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-6 text-center">Self-Guided Tools</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-12">
         Courses and guides for working through specific challenges at your own pace.
       </p>
 
       <!-- Featured Course -->
       {courses.filter(c => c.featured).map(course => (
-        <div class="bg-sage/10 rounded-xl p-xl mb-xl border border-sage-light">
+        <div class="bg-sage/10 rounded-xl p-12 mb-12 border border-sage-light">
           <span class="text-xs text-sage font-medium uppercase tracking-wide">Start Here</span>
-          <h2 class="font-serif text-2xl text-charcoal mt-sm mb-md">{course.title}</h2>
-          <p class="text-charcoal-light mb-lg">{course.description}</p>
-          <div class="mb-lg">
-            <p class="text-sm font-medium text-charcoal mb-sm">What you'll learn:</p>
-            <ul class="space-y-sm">
+          <h2 class="font-serif text-2xl text-charcoal mt-4 mb-6">{course.title}</h2>
+          <p class="text-charcoal-light mb-8">{course.description}</p>
+          <div class="mb-8">
+            <p class="text-sm font-medium text-charcoal mb-4">What you'll learn:</p>
+            <ul class="space-y-4">
               {course.outcomes.map(outcome => (
-                <li class="flex items-start gap-sm text-sm text-charcoal-light">
+                <li class="flex items-start gap-4 text-sm text-charcoal-light">
                   <svg class="w-5 h-5 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                   </svg>
@@ -52,7 +52,7 @@ const courses = [
             </ul>
           </div>
           <button
-            class="bg-sage text-cream px-lg py-sm rounded-md hover:bg-sage-dark transition-colors font-medium"
+            class="bg-sage text-cream px-8 py-4 rounded-md hover:bg-sage-dark transition-colors font-medium"
             disabled
           >
             Coming Soon
@@ -61,16 +61,16 @@ const courses = [
       ))}
 
       <!-- Course Grid -->
-      <div class="space-y-md mb-xl">
+      <div class="space-y-6 mb-12">
         {courses.filter(c => !c.featured).map(course => (
-          <div class="bg-white rounded-xl p-lg border border-cream-dark">
-            <h3 class="font-serif text-xl text-charcoal mb-sm">{course.title}</h3>
-            <p class="text-charcoal-light mb-md">{course.description}</p>
-            <div class="mb-md">
-              <p class="text-sm font-medium text-charcoal mb-sm">What you'll learn:</p>
-              <ul class="space-y-xs">
+          <div class="bg-white rounded-xl p-8 border border-cream-dark">
+            <h3 class="font-serif text-xl text-charcoal mb-4">{course.title}</h3>
+            <p class="text-charcoal-light mb-6">{course.description}</p>
+            <div class="mb-6">
+              <p class="text-sm font-medium text-charcoal mb-4">What you'll learn:</p>
+              <ul class="space-y-2">
                 {course.outcomes.map(outcome => (
-                  <li class="flex items-start gap-sm text-sm text-charcoal-light">
+                  <li class="flex items-start gap-4 text-sm text-charcoal-light">
                     <svg class="w-4 h-4 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
@@ -90,30 +90,30 @@ const courses = [
       </div>
 
       <!-- FAQ Section -->
-      <div class="border-t border-cream-dark pt-xl">
-        <h2 class="font-serif text-2xl mb-lg text-center">Questions</h2>
-        <div class="space-y-md">
+      <div class="border-t border-cream-dark pt-12">
+        <h2 class="font-serif text-2xl mb-8 text-center">Questions</h2>
+        <div class="space-y-6">
           <details class="bg-white rounded-xl border border-cream-dark">
-            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+            <summary class="p-6 cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
               Are these a substitute for therapy?
             </summary>
-            <div class="px-md pb-md text-sm text-charcoal-light">
+            <div class="px-6 pb-6 text-sm text-charcoal-light">
               <p>No. These courses are educational tools for personal growth. They're not therapy and aren't a substitute for professional mental health treatment. If you're struggling with significant mental health challenges, please reach out to a licensed provider.</p>
             </div>
           </details>
           <details class="bg-white rounded-xl border border-cream-dark">
-            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+            <summary class="p-6 cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
               How long do I have access?
             </summary>
-            <div class="px-md pb-md text-sm text-charcoal-light">
+            <div class="px-6 pb-6 text-sm text-charcoal-light">
               <p>Once you purchase a course, you'll have lifetime access to the materials.</p>
             </div>
           </details>
           <details class="bg-white rounded-xl border border-cream-dark">
-            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+            <summary class="p-6 cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
               Can I get a refund?
             </summary>
-            <div class="px-md pb-md text-sm text-charcoal-light">
+            <div class="px-6 pb-6 text-sm text-charcoal-light">
               <p>Yes. If a course isn't right for you, reach out within 14 days for a full refund.</p>
             </div>
           </details>

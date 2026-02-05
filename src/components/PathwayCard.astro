@@ -18,15 +18,15 @@ const icons = {
 
 <a
   href={href}
-  class="group block bg-white rounded-xl p-lg shadow-sm border border-cream-dark hover:shadow-md hover:border-sage-light transition-all duration-200"
+  class="group block bg-white rounded-xl p-8 shadow-sm border border-cream-dark hover:shadow-md hover:border-sage-light transition-all duration-200"
 >
-  <div class="flex items-start gap-md">
+  <div class="flex items-start gap-6">
     <div class="w-12 h-12 rounded-lg bg-sage/10 flex items-center justify-center text-sage group-hover:bg-sage group-hover:text-cream transition-colors">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={icons[icon]} />
     </div>
     <div class="flex-1">
       <h3 class="font-serif text-lg text-charcoal group-hover:text-sage transition-colors">{title}</h3>
-      <p class="text-sm text-charcoal-light mt-xs">{description}</p>
+      <p class="text-sm text-charcoal-light mt-2">{description}</p>
     </div>
     <svg class="w-5 h-5 text-warm-gray group-hover:text-sage group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
