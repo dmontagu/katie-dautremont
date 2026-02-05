@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PathwayCard from '../components/PathwayCard.astro';
+---
+
+<Layout title="Home" description="Katie d'Autremont is a licensed therapist who writes, teaches, and guides people through personal growth. Therapy, writing, courses, and more.">
+  <!-- Hero Section -->
+  <section class="py-3xl px-lg">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-md">
+        Growth is a practice,<br />not a destination.
+      </h1>
+      <p class="text-lg text-charcoal-light max-w-2xl mx-auto">
+        I'm Katie, a licensed therapist who believes the most meaningful work happens when you're ready for it. Whether you're looking for support, insight, or tools to take with you, there's a place here for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pathways Section -->
+  <section class="py-xl px-lg bg-cream-dark/50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-serif text-2xl text-center mb-xl">Ways to Work Together</h2>
+      <div class="grid md:grid-cols-2 gap-md">
+        <PathwayCard
+          title="One-on-One Therapy"
+          description="Deep, ongoing work for those ready to explore patterns, process emotions, and create lasting change."
+          href="/therapy"
+          icon="therapy"
+        />
+        <PathwayCard
+          title="Read & Reflect"
+          description="Essays and reflections on therapy, emotions, and what happens between sessions."
+          href="/writing"
+          icon="writing"
+        />
+        <PathwayCard
+          title="Self-Guided Tools"
+          description="Courses and guides for working through specific challenges at your own pace."
+          href="/courses"
+          icon="courses"
+        />
+        <PathwayCard
+          title="Ask a Question"
+          description="Submit a question and I might answer it in a future post."
+          href="/ask"
+          icon="ask"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials Strip -->
+  <section class="py-xl px-lg">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap justify-center gap-lg text-center">
+        <div class="px-lg">
+          <p class="font-serif text-lg text-charcoal">Licensed Therapist</p>
+          <p class="text-sm text-warm-gray">LCSW</p>
+        </div>
+        <div class="hidden md:block w-px bg-cream-dark"></div>
+        <div class="px-lg">
+          <p class="font-serif text-lg text-charcoal">Private Practice</p>
+          <p class="text-sm text-warm-gray">Be Balanced Counseling</p>
+        </div>
+        <div class="hidden md:block w-px bg-cream-dark"></div>
+        <div class="px-lg">
+          <p class="font-serif text-lg text-charcoal">Specializing In</p>
+          <p class="text-sm text-warm-gray">Anxiety, Depression, Life Transitions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="py-xl px-lg bg-sage/5">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-serif text-2xl mb-md">Who This Is For</h2>
+      <p class="text-charcoal-light mb-md">
+        I work best with people who have some stability in their lives and are genuinely curious about themselves. You don't need to have it all figured out — but you're ready to look inward, ask hard questions, and do the work that real growth requires.
+      </p>
+      <p class="text-charcoal-light">
+        If you're in crisis or need immediate support, I've included resources in the footer. There's no shame in needing a different kind of help right now.
+      </p>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-xl px-lg">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="font-serif text-2xl mb-sm">Between Sessions</h2>
+      <p class="text-charcoal-light mb-lg">
+        Thoughts on therapy, emotions, and the work that happens outside the room. Delivered when I have something worth saying.
+      </p>
+      <form class="flex flex-col sm:flex-row gap-sm max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="Your email"
+          class="flex-1 px-md py-sm rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="px-lg py-sm bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p class="text-xs text-warm-gray mt-sm">
+        Or follow on <a href="https://substack.com/@katiebetweensessions" class="underline hover:text-sage" target="_blank" rel="noopener">Substack</a>
+      </p>
+    </div>
+  </section>
+</Layout>

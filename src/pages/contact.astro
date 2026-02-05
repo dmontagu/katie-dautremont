@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with Katie d'Autremont for therapy inquiries, speaking engagements, or general questions.">
+  <section class="py-3xl px-lg">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Get in Touch</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-xl mx-auto mb-xl">
+        Whether you're interested in therapy, have a question, or just want to say hello.
+      </p>
+
+      <!-- Contact Form -->
+      <form class="bg-white rounded-xl p-xl border border-cream-dark mb-xl">
+        <div class="grid md:grid-cols-2 gap-md mb-lg">
+          <div>
+            <label for="name" class="block text-sm font-medium text-charcoal mb-sm">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-charcoal mb-sm">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mb-lg">
+          <label for="subject" class="block text-sm font-medium text-charcoal mb-sm">
+            What's this about?
+          </label>
+          <select
+            id="subject"
+            name="subject"
+            class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+            required
+          >
+            <option value="">Select one...</option>
+            <option value="therapy">Therapy inquiry</option>
+            <option value="courses">Question about courses</option>
+            <option value="speaking">Speaking or collaboration</option>
+            <option value="other">Something else</option>
+          </select>
+        </div>
+
+        <div class="mb-lg">
+          <label for="message" class="block text-sm font-medium text-charcoal mb-sm">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors resize-none"
+            required
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-sage text-cream py-md rounded-md hover:bg-sage-dark transition-colors font-medium"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <!-- Additional Info -->
+      <div class="grid md:grid-cols-2 gap-md">
+        <div class="bg-sage/5 p-lg rounded-xl">
+          <h2 class="font-serif text-lg text-charcoal mb-sm">For Therapy Inquiries</h2>
+          <p class="text-sm text-charcoal-light mb-md">
+            If you're interested in starting therapy, I offer a free 15-minute consultation to see if we're a good fit.
+          </p>
+          <a href="#" class="text-sage font-medium text-sm hover:text-sage-dark transition-colors">
+            Schedule a Consultation →
+          </a>
+        </div>
+        <div class="bg-cream-dark/50 p-lg rounded-xl">
+          <h2 class="font-serif text-lg text-charcoal mb-sm">Response Time</h2>
+          <p class="text-sm text-charcoal-light">
+            I typically respond within 2-3 business days. If your inquiry is urgent, please indicate that in your message.
+          </p>
+        </div>
+      </div>
+
+      <!-- Telehealth Note -->
+      <div class="mt-lg p-md bg-white rounded-xl border border-cream-dark text-center">
+        <p class="text-sm text-charcoal-light">
+          <strong class="text-charcoal">Note:</strong> All therapy sessions are conducted via secure telehealth video.
+          I am currently licensed to see clients in <strong class="text-charcoal">[State(s)]</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

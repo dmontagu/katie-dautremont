@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Placeholder articles - these would come from your Substack or CMS later
+const articles = [
+  {
+    title: "What Happens Between Sessions",
+    excerpt: "The real work of therapy doesn't happen in the room. It happens in the days after — in the small moments where you catch yourself, pause, and choose differently.",
+    date: "Coming soon",
+    featured: true,
+  },
+  {
+    title: "On Feeling Ready",
+    excerpt: "People often ask when they'll feel ready for change. The truth is, readiness isn't a feeling — it's a decision.",
+    date: "Coming soon",
+  },
+  {
+    title: "The Myth of 'Fixing' Yourself",
+    excerpt: "Growth isn't about becoming a different person. It's about becoming more fully yourself.",
+    date: "Coming soon",
+  },
+];
+---
+
+<Layout title="Writing" description="Essays and reflections on therapy, emotions, and personal growth from Katie d'Autremont, LCSW.">
+  <section class="py-3xl px-lg">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Read & Reflect</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-lg">
+        Essays and reflections on therapy, emotions, and what happens between sessions.
+      </p>
+
+      <!-- Substack CTA -->
+      <div class="text-center mb-xl">
+        <a
+          href="https://substack.com/@katiebetweensessions"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-sage text-cream px-lg py-sm rounded-md hover:bg-sage-dark transition-colors font-medium"
+        >
+          Subscribe on Substack
+        </a>
+      </div>
+
+      <!-- Featured Article -->
+      {articles.filter(a => a.featured).map(article => (
+        <article class="bg-white rounded-xl p-xl border border-cream-dark mb-xl">
+          <span class="text-xs text-sage font-medium uppercase tracking-wide">Featured</span>
+          <h2 class="font-serif text-2xl text-charcoal mt-sm mb-md">{article.title}</h2>
+          <p class="text-charcoal-light mb-md">{article.excerpt}</p>
+          <p class="text-sm text-warm-gray">{article.date}</p>
+        </article>
+      ))}
+
+      <!-- Article Grid -->
+      <div class="grid md:grid-cols-2 gap-md mb-xl">
+        {articles.filter(a => !a.featured).map(article => (
+          <article class="bg-white rounded-xl p-lg border border-cream-dark hover:border-sage-light transition-colors">
+            <h3 class="font-serif text-lg text-charcoal mb-sm">{article.title}</h3>
+            <p class="text-sm text-charcoal-light mb-md">{article.excerpt}</p>
+            <p class="text-xs text-warm-gray">{article.date}</p>
+          </article>
+        ))}
+      </div>
+
+      <!-- Newsletter Signup -->
+      <div class="bg-sage/5 rounded-xl p-xl text-center">
+        <h2 class="font-serif text-xl mb-sm">Between Sessions</h2>
+        <p class="text-charcoal-light mb-lg text-sm">
+          Get new essays delivered to your inbox. No spam, just thoughts worth sharing.
+        </p>
+        <form class="flex flex-col sm:flex-row gap-sm max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Your email"
+            class="flex-1 px-md py-sm rounded-md border border-cream-dark bg-white focus:border-sage focus:outline-none text-sm"
+            required
+          />
+          <button
+            type="submit"
+            class="px-lg py-sm bg-sage text-cream rounded-md hover:bg-sage-dark transition-colors font-medium text-sm"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

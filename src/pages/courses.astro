@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const courses = [
+  {
+    title: "Emotional Processing 101",
+    description: "Learn to identify, understand, and work through difficult emotions without getting overwhelmed.",
+    outcomes: [
+      "Understand the purpose of different emotions",
+      "Develop tools for processing intense feelings",
+      "Build a sustainable emotional wellness practice",
+    ],
+    featured: true,
+  },
+  {
+    title: "A Guide to Stress-Free Living",
+    description: "Practical strategies for managing stress and building resilience in daily life.",
+    outcomes: [
+      "Identify your personal stress patterns",
+      "Learn evidence-based stress reduction techniques",
+      "Create a personalized stress management plan",
+    ],
+  },
+];
+---
+
+<Layout title="Courses" description="Self-guided courses and tools for personal growth from Katie d'Autremont, LCSW.">
+  <section class="py-3xl px-lg">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Self-Guided Tools</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-2xl mx-auto mb-xl">
+        Courses and guides for working through specific challenges at your own pace.
+      </p>
+
+      <!-- Featured Course -->
+      {courses.filter(c => c.featured).map(course => (
+        <div class="bg-sage/10 rounded-xl p-xl mb-xl border border-sage-light">
+          <span class="text-xs text-sage font-medium uppercase tracking-wide">Start Here</span>
+          <h2 class="font-serif text-2xl text-charcoal mt-sm mb-md">{course.title}</h2>
+          <p class="text-charcoal-light mb-lg">{course.description}</p>
+          <div class="mb-lg">
+            <p class="text-sm font-medium text-charcoal mb-sm">What you'll learn:</p>
+            <ul class="space-y-sm">
+              {course.outcomes.map(outcome => (
+                <li class="flex items-start gap-sm text-sm text-charcoal-light">
+                  <svg class="w-5 h-5 text-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>{outcome}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <button
+            class="bg-sage text-cream px-lg py-sm rounded-md hover:bg-sage-dark transition-colors font-medium"
+            disabled
+          >
+            Coming Soon
+          </button>
+        </div>
+      ))}
+
+      <!-- Course Grid -->
+      <div class="space-y-md mb-xl">
+        {courses.filter(c => !c.featured).map(course => (
+          <div class="bg-white rounded-xl p-lg border border-cream-dark">
+            <h3 class="font-serif text-xl text-charcoal mb-sm">{course.title}</h3>
+            <p class="text-charcoal-light mb-md">{course.description}</p>
+            <div class="mb-md">
+              <p class="text-sm font-medium text-charcoal mb-sm">What you'll learn:</p>
+              <ul class="space-y-xs">
+                {course.outcomes.map(outcome => (
+                  <li class="flex items-start gap-sm text-sm text-charcoal-light">
+                    <svg class="w-4 h-4 text-sage flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{outcome}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button
+              class="text-sage font-medium text-sm hover:text-sage-dark transition-colors"
+              disabled
+            >
+              Coming Soon
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="border-t border-cream-dark pt-xl">
+        <h2 class="font-serif text-2xl mb-lg text-center">Questions</h2>
+        <div class="space-y-md">
+          <details class="bg-white rounded-xl border border-cream-dark">
+            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+              Are these a substitute for therapy?
+            </summary>
+            <div class="px-md pb-md text-sm text-charcoal-light">
+              <p>No. These courses are educational tools for personal growth. They're not therapy and aren't a substitute for professional mental health treatment. If you're struggling with significant mental health challenges, please reach out to a licensed provider.</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl border border-cream-dark">
+            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+              How long do I have access?
+            </summary>
+            <div class="px-md pb-md text-sm text-charcoal-light">
+              <p>Once you purchase a course, you'll have lifetime access to the materials.</p>
+            </div>
+          </details>
+          <details class="bg-white rounded-xl border border-cream-dark">
+            <summary class="p-md cursor-pointer font-medium text-charcoal hover:text-sage transition-colors">
+              Can I get a refund?
+            </summary>
+            <div class="px-md pb-md text-sm text-charcoal-light">
+              <p>Yes. If a course isn't right for you, reach out within 14 days for a full refund.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

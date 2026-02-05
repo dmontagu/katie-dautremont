@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Ask a Question" description="Submit a question about therapy, emotions, or personal growth. Katie might answer it in a future post.">
+  <section class="py-3xl px-lg">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl text-charcoal mb-md text-center">Ask a Question</h1>
+      <p class="text-lg text-charcoal-light text-center max-w-xl mx-auto mb-xl">
+        Submit a question and I might answer it in a future post.
+      </p>
+
+      <!-- Form -->
+      <form class="bg-white rounded-xl p-xl border border-cream-dark mb-xl">
+        <div class="mb-lg">
+          <label for="question" class="block text-sm font-medium text-charcoal mb-sm">
+            Your Question
+          </label>
+          <textarea
+            id="question"
+            name="question"
+            rows="6"
+            placeholder="What's on your mind? Ask about therapy, emotions, relationships, personal growth..."
+            class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors resize-none"
+            required
+          ></textarea>
+        </div>
+
+        <div class="mb-lg">
+          <label for="context" class="block text-sm font-medium text-charcoal mb-sm">
+            Any Context (Optional)
+          </label>
+          <textarea
+            id="context"
+            name="context"
+            rows="3"
+            placeholder="Background that might help me understand where you're coming from..."
+            class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors resize-none"
+          ></textarea>
+        </div>
+
+        <div class="mb-lg">
+          <label class="flex items-center gap-sm cursor-pointer">
+            <input
+              type="checkbox"
+              name="anonymous"
+              class="w-5 h-5 rounded border-cream-dark text-sage focus:ring-sage"
+              checked
+            />
+            <span class="text-sm text-charcoal-light">Keep my submission anonymous</span>
+          </label>
+        </div>
+
+        <div class="mb-lg">
+          <label for="email" class="block text-sm font-medium text-charcoal mb-sm">
+            Email (Optional)
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Only if you'd like to be notified when I respond"
+            class="w-full px-md py-sm rounded-md border border-cream-dark bg-cream/30 focus:border-sage focus:outline-none focus:bg-white transition-colors"
+          />
+          <p class="text-xs text-warm-gray mt-xs">I won't share your email or use it for anything else.</p>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-sage text-cream py-md rounded-md hover:bg-sage-dark transition-colors font-medium"
+        >
+          Submit Question
+        </button>
+      </form>
+
+      <!-- Disclaimer -->
+      <div class="bg-cream-dark/50 p-lg rounded-xl">
+        <h2 class="font-medium text-charcoal mb-sm">A few things to know:</h2>
+        <ul class="text-sm text-charcoal-light space-y-sm">
+          <li class="flex items-start gap-sm">
+            <span class="text-sage">•</span>
+            <span>I read every question but can't respond to all of them individually.</span>
+          </li>
+          <li class="flex items-start gap-sm">
+            <span class="text-sage">•</span>
+            <span>Selected questions may be answered in future essays or posts (anonymously, unless you specify otherwise).</span>
+          </li>
+          <li class="flex items-start gap-sm">
+            <span class="text-sage">•</span>
+            <span>This is not a substitute for therapy. I cannot provide personalized mental health advice through this form.</span>
+          </li>
+          <li class="flex items-start gap-sm">
+            <span class="text-sage">•</span>
+            <span>If you're in crisis, please reach out to the 988 Suicide & Crisis Lifeline or go to your nearest emergency room.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>
