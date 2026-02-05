@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { url } from '../utils/url';
+import { Image } from 'astro:assets';
+import katiePhoto from '../assets/katie-dautremont.jpeg';
+import goosePhoto from '../assets/goose.jpg';
 ---
 
 <Layout title="About" description="Learn about Katie d'Autremont, a licensed clinical professional counselor specializing in anxiety, depression, and life transitions.">
@@ -17,9 +19,10 @@ import { url } from '../utils/url';
       <div class="grid md:grid-cols-3 gap-12 items-start">
         <!-- Photo -->
         <div class="md:col-span-1">
-          <img
-            src={url('/katie-dautremont.jpeg')}
+          <Image
+            src={katiePhoto}
             alt="Katie d'Autremont, LCPC"
+            width={400}
             class="w-full rounded-xl shadow-md"
           />
         </div>
@@ -43,9 +46,11 @@ import { url } from '../utils/url';
       <!-- Goose section -->
       <div class="mt-16 bg-sage/5 rounded-2xl p-8 md:p-12">
         <div class="flex flex-col md:flex-row items-center gap-8">
-          <img
-            src={url('/goose.jpg')}
+          <Image
+            src={goosePhoto}
             alt="Goose the dog"
+            width={192}
+            height={192}
             class="w-48 h-48 object-cover rounded-full shadow-md"
           />
           <div>

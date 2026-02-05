@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import PathwayCard from '../components/PathwayCard.astro';
 import { url } from '../utils/url';
+import { Image } from 'astro:assets';
+import katiePhoto from '../assets/katie-dautremont.jpeg';
 ---
 
 <Layout title="Home" description="Katie d'Autremont is a licensed therapist who writes, teaches, and guides people through personal growth. Therapy, writing, courses, and more.">
@@ -26,10 +28,12 @@ import { url } from '../utils/url';
           </div>
         </div>
         <div class="order-1 md:order-2 flex justify-center">
-          <img
-            src={url('/katie-dautremont.jpeg')}
+          <Image
+            src={katiePhoto}
             alt="Katie d'Autremont, LCPC"
+            width={320}
             class="w-64 md:w-80 rounded-2xl shadow-lg"
+            loading="eager"
           />
         </div>
       </div>
